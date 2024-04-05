@@ -4,6 +4,9 @@ WORKDIR /var/www/html
 # Mod Rewrite
 RUN a2enmod rewrite
 
+# Run update
+RUN apt-get update
+
 # Linux Library
 RUN apt-get update -y && apt-get install -y \
     libicu-dev \
